@@ -1,0 +1,5 @@
+[default]
+entity = sagucio-klara
+project = 888
+base_url = https://api.wandb.ai
+

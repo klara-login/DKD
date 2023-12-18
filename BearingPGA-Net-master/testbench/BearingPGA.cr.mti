@@ -1,0 +1,22 @@
+E:/CNN/BearingPGA-Net-master/testbench/butterfly.v {1 {vlog -work work -vopt -stats=none E:/CNN/BearingPGA-Net-master/testbench/butterfly.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module butterfly
+
+Top level modules:
+	butterfly
+
+} {} {}} E:/CNN/BearingPGA-Net-master/testbench/fft8_TB.v {1 {vlog -work work -vopt -stats=none E:/CNN/BearingPGA-Net-master/testbench/fft8_TB.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module test
+
+Top level modules:
+	test
+
+} {} {}} E:/CNN/BearingPGA-Net-master/testbench/fft8.v {1 {vlog -work work -vopt -stats=none E:/CNN/BearingPGA-Net-master/testbench/fft8.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module fft8
+
+Top level modules:
+	fft8
+
+} {} {}}

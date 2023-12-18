@@ -1,0 +1,358 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Dec  3 10:07:36 2023
+# Process ID: 11932
+# Current directory: E:/CNN/BearingPGA-Net-master/vivado/BeaingPGA_Net/BeaingPGA_Net.runs/synth_1
+# Command line: vivado.exe -log FcBiasAdd.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source FcBiasAdd.tcl
+# Log file: E:/CNN/BearingPGA-Net-master/vivado/BeaingPGA_Net/BeaingPGA_Net.runs/synth_1/FcBiasAdd.vds
+# Journal file: E:/CNN/BearingPGA-Net-master/vivado/BeaingPGA_Net/BeaingPGA_Net.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source FcBiasAdd.tcl -notrace
+Command: synth_design -top FcBiasAdd -part xc7k325tfbv900-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13304 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 702.078 ; gain = 238.699
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'FcBiasAdd' [E:/CNN/BearingPGA-Net-master/1D_CONV_RTL/FcBiasAdd.v:1]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter OUTPUT_NODES bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fixedAdd16' [E:/CNN/BearingPGA-Net-master/1D_CONV_RTL/fixedAdd16.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'fixedAdd16' (1#1) [E:/CNN/BearingPGA-Net-master/1D_CONV_RTL/fixedAdd16.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'FcBiasAdd' (2#1) [E:/CNN/BearingPGA-Net-master/1D_CONV_RTL/FcBiasAdd.v:1]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 774.496 ; gain = 311.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 774.496 ; gain = 311.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k325tfbv900-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k325tfbv900-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 774.496 ; gain = 311.117
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'result_reg' [E:/CNN/BearingPGA-Net-master/1D_CONV_RTL/fixedAdd16.v:19]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 774.496 ; gain = 311.117
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     15 Bit       Adders := 20    
+	   2 Input     15 Bit       Adders := 10    
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 50    
+	   6 Input     16 Bit        Muxes := 10    
+	   2 Input      1 Bit        Muxes := 30    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module fixedAdd16 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     15 Bit       Adders := 2     
+	   2 Input     15 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 5     
+	   6 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 840 (col length:140)
+BRAMs: 890 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].FADD/result_reg[14]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].FADD/result_reg[13]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].FADD/result_reg[12]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].FADD/result_reg[11]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].FADD/result_reg[10]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].FADD/result_reg[9]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].FADD/result_reg[8]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].FADD/result_reg[7]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].FADD/result_reg[6]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].FADD/result_reg[5]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].FADD/result_reg[4]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].FADD/result_reg[3]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].FADD/result_reg[2]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].FADD/result_reg[1]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].FADD/result_reg[0]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].FADD/result_reg[14]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].FADD/result_reg[13]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].FADD/result_reg[12]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].FADD/result_reg[11]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].FADD/result_reg[10]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].FADD/result_reg[9]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].FADD/result_reg[8]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].FADD/result_reg[7]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].FADD/result_reg[6]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].FADD/result_reg[5]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].FADD/result_reg[4]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].FADD/result_reg[3]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].FADD/result_reg[2]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].FADD/result_reg[1]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].FADD/result_reg[0]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].FADD/result_reg[14]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].FADD/result_reg[13]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].FADD/result_reg[12]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].FADD/result_reg[11]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].FADD/result_reg[10]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].FADD/result_reg[9]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].FADD/result_reg[8]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].FADD/result_reg[7]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].FADD/result_reg[6]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].FADD/result_reg[5]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].FADD/result_reg[4]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].FADD/result_reg[3]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].FADD/result_reg[2]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].FADD/result_reg[1]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].FADD/result_reg[0]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].FADD/result_reg[14]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].FADD/result_reg[13]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].FADD/result_reg[12]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].FADD/result_reg[11]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].FADD/result_reg[10]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].FADD/result_reg[9]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].FADD/result_reg[8]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].FADD/result_reg[7]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].FADD/result_reg[6]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].FADD/result_reg[5]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].FADD/result_reg[4]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].FADD/result_reg[3]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].FADD/result_reg[2]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].FADD/result_reg[1]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].FADD/result_reg[0]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[4].FADD/result_reg[14]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[4].FADD/result_reg[13]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[4].FADD/result_reg[12]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[4].FADD/result_reg[11]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[4].FADD/result_reg[10]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[4].FADD/result_reg[9]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[4].FADD/result_reg[8]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[4].FADD/result_reg[7]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[4].FADD/result_reg[6]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[4].FADD/result_reg[5]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[4].FADD/result_reg[4]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[4].FADD/result_reg[3]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[4].FADD/result_reg[2]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[4].FADD/result_reg[1]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[4].FADD/result_reg[0]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[5].FADD/result_reg[14]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[5].FADD/result_reg[13]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[5].FADD/result_reg[12]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[5].FADD/result_reg[11]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[5].FADD/result_reg[10]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[5].FADD/result_reg[9]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[5].FADD/result_reg[8]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[5].FADD/result_reg[7]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[5].FADD/result_reg[6]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[5].FADD/result_reg[5]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[5].FADD/result_reg[4]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[5].FADD/result_reg[3]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[5].FADD/result_reg[2]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[5].FADD/result_reg[1]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[5].FADD/result_reg[0]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[6].FADD/result_reg[14]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[6].FADD/result_reg[13]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[6].FADD/result_reg[12]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[6].FADD/result_reg[11]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[6].FADD/result_reg[10]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[6].FADD/result_reg[9]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[6].FADD/result_reg[8]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[6].FADD/result_reg[7]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[6].FADD/result_reg[6]) is unused and will be removed from module FcBiasAdd.
+WARNING: [Synth 8-3332] Sequential element (genblk1[6].FADD/result_reg[5]) is unused and will be removed from module FcBiasAdd.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 981.422 ; gain = 518.043
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 985.879 ; gain = 522.500
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 985.879 ; gain = 522.500
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 991.805 ; gain = 528.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 991.805 ; gain = 528.426
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 991.805 ; gain = 528.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 991.805 ; gain = 528.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 991.805 ; gain = 528.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 991.805 ; gain = 528.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |   160|
+|2     |LUT2   |   510|
+|3     |LUT4   |   310|
+|4     |LUT6   |   150|
+|5     |LDP    |    10|
+|6     |IBUF   |   320|
+|7     |OBUF   |   160|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------+-------------+------+
+|      |Instance            |Module       |Cells |
++------+--------------------+-------------+------+
+|1     |top                 |             |  1620|
+|2     |  \genblk1[0].FADD  |fixedAdd16   |    92|
+|3     |  \genblk1[1].FADD  |fixedAdd16_0 |    92|
+|4     |  \genblk1[2].FADD  |fixedAdd16_1 |    92|
+|5     |  \genblk1[3].FADD  |fixedAdd16_2 |    92|
+|6     |  \genblk1[4].FADD  |fixedAdd16_3 |    92|
+|7     |  \genblk1[5].FADD  |fixedAdd16_4 |    92|
+|8     |  \genblk1[6].FADD  |fixedAdd16_5 |    92|
+|9     |  \genblk1[7].FADD  |fixedAdd16_6 |    92|
+|10    |  \genblk1[8].FADD  |fixedAdd16_7 |    92|
+|11    |  \genblk1[9].FADD  |fixedAdd16_8 |    92|
++------+--------------------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 991.805 ; gain = 528.426
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 151 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 991.805 ; gain = 528.426
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 991.805 ; gain = 528.426
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1004.871 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 170 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1105.938 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 10 instances were transformed.
+  LDP => LDPE: 10 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+14 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1105.938 ; gain = 667.648
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1105.938 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/CNN/BearingPGA-Net-master/vivado/BeaingPGA_Net/BeaingPGA_Net.runs/synth_1/FcBiasAdd.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file FcBiasAdd_utilization_synth.rpt -pb FcBiasAdd_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  3 10:08:02 2023...
